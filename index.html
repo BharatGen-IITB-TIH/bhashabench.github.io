@@ -1,0 +1,534 @@
+<meta http-equiv="Cache-Control" content="max-age=86400" />
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Evaluating mathematical reasoning of foundation models in visual contexts">
+  <meta name="keywords" content="MathVista, Math Vista">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BHASHABENCH V1</title>
+
+
+  <link rel="icon" href="./static/images/bg.png">
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/leaderboard.css">
+
+ <script type="text/javascript" src="static/js/sort-table.js" defer></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/explorer-index.js"></script>
+  <script src="./static/js/question_card.js"></script>
+
+  <script src="./static/js/leaderboard_testmini.js"></script>  
+  <script src="./data/results/output_folders.js" defer></script>
+  <script src="./data/results/model_scores.js" defer></script>
+
+  <script src="./visualizer/data/data_public.js" defer></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title is-bold">
+            <img src="static/images/bg.png" style="width:2em;vertical-align: middle" alt="Logo"/>
+            <span class="bhashabench" style="vertical-align: middle">BHASHABENCH V1</span>
+            </h1>
+          <h2 class="subtitle is-3 publication-subtitle">
+            A COMPREHENSIVE BENCH-MARK FOR THE QUADRANT OF INDIC DOMAINS
+            
+          </h2>
+          <!-- <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://songxiaoshuai.github.io/">Xiaoshuai Song</a>,</span>
+            <span class="author-block">
+              <a href="https://github.com/LeonDiao0427/">Muxi Diao</a>,</span>
+            <span class="author-block">
+              <a href="https://pris-nlp.github.io/">Guanting Dong</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://pris-nlp.github.io/">Zhengyang Wang</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://pris-nlp.github.io/">Yujia Fu</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://bhashabench.github.io/">Runqi Qiao</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://pris-nlp.github.io/">Zhexu Wang</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://pris-nlp.github.io/">Dayuan Fu</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://pris-nlp.github.io/">Huangxuan Wu</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://pris-nlp.github.io/">Weihao Zeng</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://pris-nlp.github.io/">Yejie Wang</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://pris-nlp.github.io/">Zhuoma Gongque</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://pris-nlp.github.io/">Jianing Yu</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://bhashabench.github.io/">Qiuna Tan</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://pris-nlp.github.io/">Weiran Xu</a>
+            </span>
+          </div> -->
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Beijing University of Posts and Telecommunications</span><br>
+            <!-- <span class="paper-block"><b style="color:#f41c1c">ICLR 2024 Oral</b> (85 in 7304, 1.2%)</span> -->
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <!-- @PAN TODO: change links -->
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/BharatGen-IITB-TIH/BhashaBench"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://huggingface.co/collections/bharatgenai/bhashabench-v1-68caea05bdbd80b7c60761c6"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <!-- <i class="far fa-images"></i> -->
+                      <p style="font-size:18px">🤗</p>
+                      <!-- 🔗 -->
+                  </span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+              
+              <!-- Leaderboard Link. -->
+              <span class="link-block">
+                <a href="https://bhashabench.github.io/#leaderboard"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <p style="font-size:18px">🏆</p>
+                  </span>
+                  <span>Leaderboard</span>
+                </a>
+              </span>
+              
+              <!-- </span> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container" style="margin-top: -100px; margin-bottom: -100px;"></div>
+  <div class="container" style="margin-bottom: 2vh;">
+    <!-- <div class="container" style="margin-top: -150px; margin-bottom: -100px;"></div> -->
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">ABSTRACT</h2>
+        <div class="content has-text-justified">
+          <p>
+            The rapid advancement of large language models (LLMs) has intensified the need
+for domain and culture specific evaluation. Existing benchmarks are largely Anglocentric and domain-agnostic, limiting their applicability to India-centric contexts. To address this gap, we introduce BhashaBench V1, the first domain specific, multi-task, bilingual benchmark focusing on critical Indic knowledge
+systems. BhashaBench V1 contains 74,166 meticulously curated question-answer
+pairs, with 52,494 in English and 21,672 in Hindi, sourced from authentic government and domain-specific exams. It spans four major domains: Agriculture, Legal, Finance, and Ayurveda, comprising 90+ subdomains and covering 500+ topics, enabling fine-grained evaluation. Evaluation of 29+ LLMs reveals significant
+domain and language specific performance gaps, with especially large disparities
+in low-resource domains. For instance, GPT-4o achieves 76.49% overall accuracy
+in Legal but only 59.74% in Ayurveda. Models consistently perform better on
+English content compared to Hindi across all domains. Subdomain-level analysis shows that areas such as Cyber Law, International Finance perform relatively
+well, while Panchakarma, Seed Science, and Human Rights remain notably weak.
+BhashaBench V1 provides a comprehensive dataset for evaluating large language
+models across India’s diverse knowledge domains. It enables assessment of models’ ability to integrate domain-specific knowledge with bilingual understanding.
+All code, benchmarks, and resources are publicly available to support open research.
+          </p>
+      </div>
+      
+      </div>
+    </div>
+    <!--/ Abstract. -->
+</div>
+</section>
+
+
+<section class="section">
+  <div class="container" style="margin-top: -170px; margin-bottom: -100px;">
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/1.png" alt="geometric reasoning" style="width:84%; height:500px; object-fit: contain;"/>
+              <p> Figure 1: Overview diagram and statistics of 
+              <img src="static/images/bg.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+              <span class="bhashabench">BHASHABENCH.</span>
+               </p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/2.png" alt="geometric reasoning" style="width:84%; height:500px; object-fit: contain;"/>
+              <p> Figure 2: Comparative performance of small
+models (≤4B) over
+                <img src="static/images/bg.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+                <span class="bhashabench">BHASHABENCH V1.</span>  (EN).
+              </p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/3.png" alt="geometric reasoning" style="width:84%; height:500px; object-fit: contain;"/>
+              <p> Figure 3: Comparative performance analysis of the
+GPT model family on 
+                <img src="static/images/bg.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+                <span class="bhashabench">BHASHABENCH V1.</span>  (EN).
+
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+
+
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <!-- <div class="column is-full-width has-text-centered"> -->
+        <div class="column is-four-fifths">
+        <h2 class="title is-3">BHASHABENCH</h2>
+        <div class="content has-text-justified">
+          <p>
+            The primary motivation behind <b>BhashaBench V1</b>  is to comprehensively assess domain-specific
+knowledge and reasoning capabilities of large language models within <b>India’s</b> diverse and culturally rich knowledge ecosystems. Unlike existing benchmarks focusing on general or Western-centric
+domains, our benchmark evaluates specialized Indian knowledge systems requiring deep cultural understanding and contextual awareness. BhashaBench V1 adheres to seven core design principles: (1)
+Critical Indian Domains: Encompasses <b>Agriculture, Legal systems, Finance, and Ayurveda</b> with
+fine-grained subfields. (2) Diverse Task Formats: Includes multiple-choice, assertion-reasoning,
+fill-in-blanks, and comprehension tasks. (3) India-Specific Reasoning: Evaluates domain-specific
+reasoning incorporating cultural contexts and regional practices. (4) Bilingual Framework: Sup-
+ports English and Hindi evaluation maintaining cultural authenticity. (5) Authentic Sources: Ques-
+tions curated from government examinations and professional certifications. (6) Difficulty Assess-
+ment: Categorized into Easy, Medium, Hard levels. (7) Cultural Authenticity: Prioritizes tradi-
+tional knowledge systems including Ayurvedic principles. 1 This framework spans <b>90+ subdomains
+covering 500+</b> topics, enabling comprehensive evaluation of model capabilities in India-centric con-
+texts.
+            </p>
+          <h3 class="title is-3" style="text-align: left;">DATA COLLECTION</h3>
+          <p>The data collection process for BhashaBench V1 follows a systematic approach similar to AGIEVAL
+(Zhong et al., 2023), focusing on <b>authentic examination materials</b> from national and state-level assessments. We systematically gathered publicly available question papers from official online examination portals, which host previously released papers that are manually curated by subject matter experts, ensuring accurate topic tagging, language annotation, and validated answer keys.
+Our comprehensive collection encompasses over <b>40</b> different examination types across multiple
+categories: <b>national competitive exams, domain-specific degree examinations, professional certification tests, and state-level civil services examinations</b>. Regional state examinations proved particularly valuable as they incorporate state-specific topics, local knowledge systems, and cultural practices often overlooked in national assessments. These examinations are typically taken by individuals seeking higher education opportunities or career advancement, ensuring questions reflect practical, real-world knowledge requirements.
+The final dataset comprises <b>74,166 carefully curated question–answer pairs</b> spanning four core domains, with 52,494 questions in English (70.8%) and 21,672 questions in Hindi (29.2%), reflecting practical usage patterns in Indian educational and professional contexts. This approach ensures
+BhashaBench V1 captures the nuanced intersection between language, culture, and domain expertise
+essential for effective model deployment in Indian contexts.
+
+<h3>Data Processing and Analysis</h3>
+<p>
+The BhashaBench V1 dataset was built by extracting structured question-answer pairs from PDF examination papers while carefully <b>preserving linguistic and cultural authenticity.</b> A robust OCR pipeline powered by Surya OCR ensured high-quality text extraction across Indic languages, followed by a custom GPT-based system that structured the content into standardized JSON question-answer pairs. <b>Extensive cleaning</b> removed noisy and duplicate data, verified language integrity, and organized questions into <b>six formats,</b> with missing subdomains automatically classified. Rigorous expert validation further guaranteed accuracy, natural language flow, and cultural relevance.
+
+The final dataset contains <b>74,166 questions across four major domains</b> (Agriculture, Finance, Ayurveda, and Legal) and 91 subdomains, with English (70.8%) and Hindi (29.2%) coverage. Agriculture emphasizes agronomy, Finance highlights quantitative problem solving, Ayurveda captures traditional medicine knowledge, and Legal spans both core jurisprudence and emerging areas like Cyber Law. With over 90% MCQs and a balanced distribution of difficulty levels, BhashaBench V1 stands as a <b>high-quality, domain-rich bilingual benchmark,</b> reflecting substantial technical and validation efforts to ensure both authenticity and reliability.</p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="section">
+  <div class="container">
+    
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3" id="leaderboard">RESULTS AND DISCUSSIONS
+          </h2>
+        
+<section class="section">
+  <div class="container" style="margin-top: -120px; margin-bottom: -100px;">
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/4.1.png" alt="geometric reasoning" style="width:84%; height:500px; object-fit: contain;"/>
+              <p> Figure 4: Comparison of representative LLMs’ scores across different domains and subdomains.
+                <!-- <img src="static/images/bhashabench_logo_2.png" style="width:1.0em;vertical-align: middle" alt="Logo"/> -->
+                <!-- <span class="bhashabench">(EN + HI).</span> -->
+              </p>
+              <!-- <p>Zero-shot scores (%) of LLMs across domains on BhashaBench V1 (EN + HI). The benchmark covers Agriculture (BBK), Finance (BBF), Legal (BBL), and Ayurveda (BBA). “Avg” denotes the overall average across that domain.</p> -->
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/5.png" alt="geometric reasoning" style="width:84%; height:500px; object-fit: contain;"/>
+              <p> Figure 5: Comparison of representative LLMs’ scores across different domains and subdomains.
+                <br/> 25% for multiple-choice(MC), 50% for Assertion, 0% for fill-in-the-blank(FITB), and 10% for Open-ended.
+              <!-- across mathematical reasoning and visual context types. PoT refers to program-of-thought prompting, and PoT GPT-4 is a textual LLM augmented with the caption and OCR text. GPT-4V is manually evaluated via the playground chatbot. <b class="best-score-text" style="color: #C6011F"> The scores of Gemini Ultra are from the Gemini Team, Google.</b> -->
+              </p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/4.png" alt="geometric reasoning" style="width:84%; height:500px; object-fit: contain;"/>
+              <p> Table 1: Zero-shot scores (%) of LLMs across domains on BhashaBench V1 
+                <!-- <img src="static/images/bhashabench_logo_2.png" style="width:1.0em;vertical-align: middle" alt="Logo"/> -->
+                <span class="bhashabench">BhashaBench</span>  (EN + HI).
+                <p>Zero-shot scores (%) of LLMs across domains on BhashaBench V1 (EN + HI). The benchmark covers Agriculture (BBK), Finance (BBF), Legal (BBL), and Ayurveda (BBA). “Avg” denotes the overall average across that domain.</p>
+              <!-- across mathematical reasoning and visual context types. PoT refers to program-of-thought prompting, and PoT GPT-4 is a textual LLM augmented with the caption and OCR text. GPT-4V is manually evaluated via the playground chatbot. -->
+              
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+<p>🚨 To submit your results to the leaderboard, please send to <a href="mailto:vijay.devane@tihiitb.org">this email</a> with your result json files.</p>
+
+<!-- DATASET SECTION -->
+<section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+     <h1 class="title is-1 bhashabench">
+    <img src="static/images/bg.png" style="width:1.5em;vertical-align: middle" alt="Logo"/>
+                          <span class="bhashabench" style="width:1.5em;vertical-align: middle">BHASHABENCH V1</span>
+  </h1>
+  </div>
+</section>
+
+            
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <!-- <div class="column is-full-width has-text-centered"> -->
+        <div class="column is-four-fifths">
+        <h2 class="title is-3">LIMITATIONS AND BIASES</h2>
+        <div class="content has-text-justified">
+          <p>
+            <!--<img src="static/images/bg.png" style="width:5.0em;vertical-align: middle" alt="Logo"/>-->
+            <span class="bhashabench">In this paper,</span>we introduce BhashaBench V1, providing a comprehensive evaluation of LLMs on
+India-centric knowledge systems and exploring model capabilities across critical Indian domains.
+However, there are several limitations to acknowledge. (1) Language Coverage Limitations: Al-
+though BhashaBench V1 supports English and Hindi, covering a significant portion of India’s pop-
+ulation, India has 22 official languages and hundreds of regional dialects. Our current evaluation
+cannot capture the full linguistic diversity of Indian knowledge systems, particularly regional varia-
+tions in agricultural practices, legal terminologies, and traditional medicine nomenclature that exist
+in languages like Tamil, Telugu, Bengali, and others. Future iterations will expand to include addi-
+tional Indian languages to enhance coverage. (2) Domain Scope Limitations: While we cover four
+fundamental domains (Agriculture, Legal, Finance, and Ayurveda) representing core areas of Indian
+society, our assessment cannot encompass the entire breadth of India-specific knowledge systems.
+Areas such as traditional crafts, regional governance systems, indigenous engineering practices, and
+other vernacular knowledge traditions remain unexplored for future expansion. Our content spans
+from grassroots practical knowledge to professional examination standards, ensuring broad appli-
+cability across different expertise levels. (3) Evaluation Methodology Limitations: Our evaluation
+primarily uses structured question formats derived from authentic government and professional ex-
+aminations. While this ensures real-world relevance and practical applicability, it may not fully
+capture all forms of contextual reasoning required in complex domain applications.
+The main biases in BhashaBench V1 can be categorized into three aspects: (1) Source Material
+Bias: Despite comprehensive curation from diverse authentic sources spanning grassroots to pro-
+fessional levels, certain regional practices and emerging contemporary developments may be un-
+derrepresented. (2) Language Resource Bias: The benchmark reflects the inherent resource dis-
+parity between English and Hindi, where Hindi content, while substantial, represents a relatively
+lower-resource context compared to English. (3) Examination Framework Bias: Our reliance on
+established examination systems, while ensuring authenticity, may introduce institutional perspec-
+tives present in the original assessment frameworks. However, our extensive coverage across 90+
+subdomains and 500+ topics from diverse sources mitigates this bias significantly. The impact of
+these limitations on LLM evaluation includes clear performance distinctions between models across
+domains and languages, as evidenced by the substantial score variations from 34.28% to 76.49%,
+demonstrating BhashaBench V1’s effectiveness in distinguishing LLM capabilities while presenting
+meaningful challenges even for top-performing models in India-specific contexts.
+            </p>
+          <h3 class="title is-3" style="text-align: left;">TOWARDS BROADER IMPACT</h3>
+          <p><b>Societal Impact.</b> BhashaBench V1 is anticipated to play a transformative role in bridging the digi-
+tal divide for India-centric knowledge systems. LLMs trained and evaluated with BhashaBench V1
+can significantly enhance accessibility to critical domain expertise across agriculture, legal services,
+finance, and traditional medicine, particularly benefiting underserved rural and semi-urban popula-
+tions. In agriculture, improved LLM capabilities can democratize access to expert crop advisory,
+pest management, and sustainable farming practices, potentially impacting the livelihoods of over
+40 million farmers dependent on agricultural activities. In the legal domain, enhanced models can
+assist with legal document comprehension, procedural guidance, and basic legal literacy, address-
+ing the substantial access-to-justice challenges faced by millions in India’s complex legal system.
+For healthcare, particularly Ayurveda, better model performance can support practitioners and pa-
+tients in understanding traditional treatment protocols and medicinal formulations, preserving and
+disseminating indigenous medical knowledge. In finance, improved model capabilities can enhance
+financial literacy and support the growing digital payment ecosystem processing billions of trans-
+actions annually. However, we acknowledge potential risks including over-reliance on automated
+systems for critical decisions, potential displacement of traditional knowledge practitioners, and the
+risk of perpetuating biases present in examination-based evaluation systems. The benchmark’s fo-
+cus on professional examination standards, while ensuring quality, may inadvertently favor formal
+educational backgrounds over experiential knowledge.
+<br/><br/>
+<b>Ethics Statement.</b> We ensure strict adherence to applicable laws and ethical guidelines throughout
+our data collection, curation, and usage processes. All question-answer pairs are sourced exclusively
+from publicly available government and professional examination papers, respecting intellectual property rights and ensuring no unauthorized reproduction of copyrighted materials. Our curation
+process involved diverse teams to minimize cultural and regional biases, though we acknowledge the
+inherent limitations of our current English and Hindi coverage. The dataset contains no personally
+identifiable information, offensive content, or culturally insensitive material. All content has been
+thoroughly verified for authenticity and accuracy through multiple validation rounds involving do-
+main experts. BhashaBench V1 is intended solely for academic research and educational purposes
+to advance inclusive AI development for Indian contexts. Any commercial use, misuse for harmful
+applications, or deployment without appropriate safeguards is strictly prohibited. We strongly urge
+all users to employ this resource responsibly, ensuring that any models developed or evaluated using
+BhashaBench V1 are deployed with appropriate human oversight, particularly in critical domains
+affecting public welfare, and with transparent disclosure of model limitations to end users.</p>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+          
+
+          
+      
+
+
+
+
+
+<!-- RESULTS SECTION -->
+        
+<!-- @PAN TODO: bibtex -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3 has-text-centered">ACKNOWLEDGEMENTS</h2>
+    <pre><code>We would like to thank BharatGen for their generous support towards building this comprehen-
+sive benchmarking initiative for Indian languages and knowledge systems. We are also immensely
+grateful to our colleagues from the BharatGen team for their motivation and meticulous efforts in
+conducting manual validation and data sourcing. We acknowledge the significant contributions of
+BharatGen’s consortium members, including IIT Bombay and IIM Indore, for their expertise in data
+curation, validation, and domain-specific guidance that made this benchmark possible.
+</code></pre>
+  </div>
+</section>
+
+<section>
+  <div class="section" id="org-banners" style="display:flex">
+    <a href="https://www.iitb.ac.in/" target="_blank" rel="external">
+        <img class="center-block org-banner" src="static/images/IIT Bombay_Logo_JPG.jpg">
+    </a>
+    <a href="https://bharatgen.com/" target="_blank" rel="external">
+      <img class="center-block org-banner" src="static/images/bg.png">
+  </a>
+  </div>
+
+</section>
+
+
+<footer class="footer">
+  <!-- <div class="container"> -->
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is website adapted from <a href="https://nerfies.github.io/">Nerfies</a> and <a href="https://bhashabench.github.io/">MathVista</a>, licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  <!-- </div> -->
+</footer>
+
+</body>
+</html>
